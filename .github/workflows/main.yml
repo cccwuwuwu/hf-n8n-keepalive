@@ -1,0 +1,16 @@
+name: Ping HF n8n Space
+
+on:
+  schedule:
+    # 每 15 分钟执行一次（cron 表达式）
+    - cron: "*/15 * * * *"
+  # 手动触发（你第一次想测试时可以用）
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl Space
+        run: |
+          curl -L --max-time 20 "https://cccwuwuwu-n8n.hf.space/" || echo "Ping failed"
