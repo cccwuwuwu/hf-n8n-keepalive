@@ -2,9 +2,9 @@ name: Ping HF n8n Space
 
 on:
   schedule:
-    # 每 15 分钟执行一次（cron 表达式）
+    # 每 15 分钟执行一次（UTC 时间）
     - cron: "*/15 * * * *"
-  # 手动触发（你第一次想测试时可以用）
+  # 手动触发（你想测试的时候可以用）
   workflow_dispatch:
 
 jobs:
